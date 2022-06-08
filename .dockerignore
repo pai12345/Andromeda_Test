@@ -1,0 +1,36 @@
+# vscode
+.vscode/
+
+# cache
+__pycache__/
+**.pyc
+
+# Build
+build/
+dist/
+
+# Script
+script/
+**.sh
+
+# env
+.env
+
+# git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+
+# Jenkins
+Jenkinsfile
+
+# Misc
+.DS_Store
+README.md
+LICENSE.md
+
+# Pipfiles
+Pipfile
+Pipfile.lock
