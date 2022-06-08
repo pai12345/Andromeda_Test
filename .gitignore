@@ -20,3 +20,4 @@ index.spec
 **.pyz
 **.html
 **.txt
+!requirements.txt
