@@ -20,8 +20,8 @@ script/
 .git
 .gitignore
 
-# Docker
-Dockerfile
+# Container files
+Containerfile
 
 # Jenkins
 Jenkinsfile

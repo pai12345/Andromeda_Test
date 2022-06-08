@@ -1,5 +1,5 @@
 # Python base image
-FROM python:3.10.0a6-alpine3.13
+FROM python:latest
 
 # Create working directory
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Expose Port
-EXPOSE 8000
+EXPOSE 5001
 
 # Execute App
 ENTRYPOINT [ "python", "index.py" ]  
