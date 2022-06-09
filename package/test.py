@@ -1,6 +1,8 @@
 import aiohttp
 
+# Class for ping test
 class Ping():
+    # Method for ping test
     async def fetch(self, request):
         try:
             async with aiohttp.ClientSession() as session:

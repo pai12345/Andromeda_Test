@@ -1,13 +1,16 @@
 from fastapi import APIRouter
 import asyncio
 from package.test import ping
+from config.config import get_env
 
 testroute = APIRouter()
 
-
+# ping test
 @testroute.get('/pingtest')
 def pingtest():
     try:
-       return asyncio.run(ping.fetch("https://pokeapi.co/api/v2/pokemon/151"))      
+        env = get_env()
+        pingtest = ping.fetch(env["svc"])
+        return asyncio.run(pingtest)
     except BaseException as error:
-            return error
+        return error
