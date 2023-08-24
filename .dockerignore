@@ -22,6 +22,7 @@ script/
 
 # Container files
 Containerfile
+Dockerfile
 
 # Jenkins
 Jenkinsfile

@@ -1,26 +1,22 @@
 from fastapi import APIRouter
-import asyncio
-from package.test import ping
-# from config.config import get_env
+import requests
 
-testroute = APIRouter()
+routes = APIRouter()
 
-# self ping test
-@testroute.get('/selfpingtest')
-def selfpingtest():
+# public api
+@routes.get('/public')
+def public():
     try:
-        # env = get_env()
-        pingtest = ping.fetch("https://pokeapi.co/api/v2/pokemon/151")
-        result = asyncio.run(pingtest)
-        print(result)
-        return f"""selfping-{result}"""
+        result = requests.get('https://catfact.ninja/fact')
+        return f"""{result.text}"""
     except BaseException as error:
         return error
 
-# ping test
-@testroute.get('/pingtest')
-def pingtest1():
+# private api
+@routes.get('/private')
+def private():
     try:
-        return "server 1"
+        result = requests.get('http://localhost:8080')
+        return f"""{result.text}"""
     except BaseException as error:
         return error

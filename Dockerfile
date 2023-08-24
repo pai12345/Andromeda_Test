@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Expose Port
-EXPOSE 5001
+EXPOSE 9000
 
 # Execute App
 ENTRYPOINT [ "python", "index.py" ]  
