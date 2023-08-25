@@ -16,7 +16,7 @@ def public():
 @routes.get('/private')
 def private():
     try:
-        result = requests.get('http://localhost:8080')
+        result = requests.get('http://svc-welcome.dev.svc.cluster.local:8080')
         return f"""{result.text}"""
     except BaseException as error:
         return error
